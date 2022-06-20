@@ -79,10 +79,9 @@ function playRound(playerSelection, computerSelection) {
     }
 
 }
-playRound(playerSelection, computerSelection);
 
 function game() {
-    for (let i = 1; i < 5; i++) {
+    for (let i = 0; i < 5; i++) {
         playRound(playerSelection, computerSelection);
         computerSelection = computerPlay();
     }
