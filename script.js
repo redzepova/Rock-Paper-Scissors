@@ -19,6 +19,8 @@ function computerPlay() {
 
 let playerSelection = "";
 const computerSelection = computerPlay();
+let userScore = 0;
+let compScore = 0;
 
 // likely they don't match, so exclude matching first. then move on
 
@@ -42,20 +44,27 @@ function playRound(playerSelection, computerSelection) {
     } else if (rockVersusPaper) {
         if (c === "paper") {
             console.log("Paper covers rock. You win!");
+            userScore = userScore + 1;
         } else {
             console.log("Paper covers rock. You lose. Try again!");
+            compScore = compScore + 1;
+
         }
     } else if (rockVersusScissors) {
         if (c === "scissors") {
             console.log("Rock smashes scissors. You win!");
+            userScore = userScore + 1;
         } else {
             console.log("Rock smashes scissors. You lose. Try again!");
+            compScore = compScore + 1;
         }
     } else if (paperVersusScissors) {
         if (c === "scissors") {
             console.log("Scissors cut paper. You lose. Try again!");
+            compScore = compScore + 1;
         } else {
             console.log("Scissors cut paper. You win!");
+            userScore = userScore + 1;
         }
     } else {
         console.log("Something wacky happened. Try again.");
@@ -65,10 +74,13 @@ function playRound(playerSelection, computerSelection) {
 playRound(playerSelection, computerSelection);
 
 function game() {
-    for (let i = 1; i <5; i++) {
-        playRound(playerSelection, computerSelection); 
+    for (let i = 1; i < 5; i++) {
+        playRound(playerSelection, computerSelection);
     }
 
 }
 
 game();
+
+console.log("Your Score: " + userScore);
+console.log("Computer Score: " + compScore);
