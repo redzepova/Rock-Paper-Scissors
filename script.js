@@ -3,7 +3,6 @@
 
 function computerPlay() {
     let i = Math.floor(Math.random() *10) + 1;
-    console.log(i);
 
     /* 2-4 = Rock
        5-7 = Paper
@@ -34,6 +33,9 @@ function playRound(playerSelection, computerSelection) {
     let paperVersusScissors = Boolean((p === "scissors" | p === "paper")&(c === "scissors" | c ==="paper"));
     let tie = Boolean (p === c);
 
+    console.log("You played " + playerSelection);
+    console.log("The computer played " + computerSelection);
+
     if (tie) {
         console.log("Tie! No one wins!");
     } else if (rockVersusPaper) {
@@ -61,14 +63,3 @@ function playRound(playerSelection, computerSelection) {
 }
 
 playRound(playerSelection, computerSelection);
-
-/* let tie = Boolean(playerSelection === computerSelection);
-
-let rockVersusPaper = Boolean((playerSelection === "rock" | playerSelection === "paper")&(computerSelection === "rock" | computerSelection ==="paper"));
-let rockVersusScissors = Boolean((playerSelection === "rock" | playerSelection === "scissors")&(computerSelection === "rock" | computerSelection ==="scissors"));
-let paperVersusScissors = Boolean((playerSelection === "scissors" | playerSelection === "paper")&(computerSelection === "scissors" | computerSelection ==="paper"));
-
-console.log(tie);
-console.log(rockVersusPaper);
-console.log(rockVersusScissors);
-console.log(paperVersusScissors); */
