@@ -1,12 +1,12 @@
 
 //Computer's move//
 
-function computerPlay() {
+/*function computerPlay() {
     let i = Math.floor(Math.random() *10) + 1;
 
     /* 2-4 = Rock
        5-7 = Paper
-       8-10 = Scissors */
+       8-10 = Scissors 
 
     if (i < 5) {
         return("Rock");
@@ -15,6 +15,13 @@ function computerPlay() {
     } else {
         return("Scissors");
     }
+} */
+
+const gameChoices = ["Rock", "Paper", "Scissors"];
+
+function computerPlay() {
+    let choice = Math.floor(Math.random() * gameChoices.length);
+    return(gameChoices[choice]);
 }
 
 let playerSelection = "";
@@ -45,27 +52,27 @@ function playRound(playerSelection, computerSelection) {
     } else if (rockVersusPaper) {
         if (c === "paper") {
             console.log("Paper covers rock. You lose. Try again!");
-            compScore = compScore + 1;
+            compScore = ++compScore;
         } else {
             console.log("Paper covers rock. You lose. Try again!");
-            userScore = userScore + 1;
+            userScore = ++userScore;
 
         }
     } else if (rockVersusScissors) {
         if (c === "scissors") {
             console.log("Rock smashes scissors. You win!");
-            userScore = userScore + 1;
+            userScore = ++userScore;
         } else {
             console.log("Rock smashes scissors. You lose. Try again!");
-            compScore = compScore + 1;
+            compScore = ++compScore;
         }
     } else if (paperVersusScissors) {
         if (c === "scissors") {
             console.log("Scissors cut paper. You lose. Try again!");
-            compScore = compScore + 1;
+            compScore = ++compScore;
         } else {
             console.log("Scissors cut paper. You win!");
-            userScore = userScore + 1;
+            userScore = ++userScore;
         }
     } else {
         console.log("Something wacky happened. Try again.");
