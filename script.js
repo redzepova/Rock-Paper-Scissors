@@ -1,4 +1,5 @@
 
+//Computer's move//
 
 function computerPlay() {
     let i = Math.floor(Math.random() *10) + 1;
@@ -9,11 +10,65 @@ function computerPlay() {
        8-10 = Scissors */
 
     if (i < 5) {
-        console.log("Rock");
+        return("Rock");
     } else if (i < 8) {
-        console.log("Paper");
+        return("Paper");
     } else {
-        console.log("Scissors");
+        return("Scissors");
     }
 }
-computerPlay()
+
+const playerSelection = prompt("Please choose Rock, Paper, or Scissors", '');
+const computerSelection = computerPlay();
+
+// likely they don't match, so exclude matching first. then move on
+
+// play a round. case-insensitive comparison of player selection
+//and computer selection. 
+
+function playRound(playerSelection, computerSelection) {
+    let p = playerSelection.toLowerCase();
+    let c = computerSelection.toLowerCase();
+    let rockVersusPaper = Boolean((p === "rock" | p === "paper")&(c === "rock" | c ==="paper"));
+    let rockVersusScissors = Boolean((p === "rock" | p === "scissors")&(c === "rock" | c ==="scissors"));
+    let paperVersusScissors = Boolean((p === "scissors" | p === "paper")&(c === "scissors" | c ==="paper"));
+    let tie = Boolean (p === c);
+
+    if (tie) {
+        console.log("Tie! No one wins!");
+    } else if (rockVersusPaper) {
+        if (c === "paper") {
+            console.log("Paper covers rock. You win!");
+        } else {
+            console.log("Paper covers rock. You lose. Try again!");
+        }
+    } else if (rockVersusScissors) {
+        if (c === "scissors") {
+            console.log("Rock smashes scissors. You win!");
+        } else {
+            console.log("Rock smashes scissors. You lose. Try again!");
+        }
+    } else if (paperVersusScissors) {
+        if (c === "scissors") {
+            console.log("Scissors cut paper. You lose. Try again!");
+        } else {
+            console.log("Scissors cut paper. You win!");
+        }
+    } else {
+        console.log("Something wacky happened. Try again.");
+    }
+
+}
+
+playRound(playerSelection, computerSelection);
+
+/* let tie = Boolean(playerSelection === computerSelection);
+
+let rockVersusPaper = Boolean((playerSelection === "rock" | playerSelection === "paper")&(computerSelection === "rock" | computerSelection ==="paper"));
+let rockVersusScissors = Boolean((playerSelection === "rock" | playerSelection === "scissors")&(computerSelection === "rock" | computerSelection ==="scissors"));
+let paperVersusScissors = Boolean((playerSelection === "scissors" | playerSelection === "paper")&(computerSelection === "scissors" | computerSelection ==="paper"));
+
+console.log(tie);
+console.log(rockVersusPaper);
+console.log(rockVersusScissors);
+console.log(paperVersusScissors); */
