@@ -18,7 +18,8 @@ function computerPlay() {
 }
 
 let playerSelection = "";
-const computerSelection = computerPlay();
+let computerSelection = computerPlay();
+
 let userScore = 0;
 let compScore = 0;
 
@@ -76,6 +77,7 @@ playRound(playerSelection, computerSelection);
 function game() {
     for (let i = 1; i < 5; i++) {
         playRound(playerSelection, computerSelection);
+        computerSelection = computerPlay();
     }
 
 }
