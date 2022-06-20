@@ -17,7 +17,7 @@ function computerPlay() {
     }
 }
 
-const playerSelection = prompt("Please choose Rock, Paper, or Scissors", '');
+let playerSelection = "";
 const computerSelection = computerPlay();
 
 // likely they don't match, so exclude matching first. then move on
@@ -26,6 +26,7 @@ const computerSelection = computerPlay();
 //and computer selection. 
 
 function playRound(playerSelection, computerSelection) {
+    playerSelection = prompt("Please choose Rock, Paper, or Scissors", '');
     let p = playerSelection.toLowerCase();
     let c = computerSelection.toLowerCase();
     let rockVersusPaper = Boolean((p === "rock" | p === "paper")&(c === "rock" | c ==="paper"));
@@ -61,5 +62,13 @@ function playRound(playerSelection, computerSelection) {
     }
 
 }
-
 playRound(playerSelection, computerSelection);
+
+function game() {
+    for (let i = 1; i <5; i++) {
+        playRound(playerSelection, computerSelection); 
+    }
+
+}
+
+game();
