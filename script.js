@@ -43,11 +43,11 @@ function playRound(playerSelection, computerSelection) {
         console.log("Tie! No one wins!");
     } else if (rockVersusPaper) {
         if (c === "paper") {
-            console.log("Paper covers rock. You win!");
-            userScore = userScore + 1;
-        } else {
             console.log("Paper covers rock. You lose. Try again!");
             compScore = compScore + 1;
+        } else {
+            console.log("Paper covers rock. You lose. Try again!");
+            userScore = userScore + 1;
 
         }
     } else if (rockVersusScissors) {
