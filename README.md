@@ -18,6 +18,16 @@ function2: plays one round of rock paper scissors. Requires two parameters - com
 
 For basic game:
 
-Computer selects first. Prompt asks for user imput. This should be case-insensitive.
+Computer selects first. Prompt asks for user imput. Using .toLowerCase to complete case insensitive match.
 
-Compare computer selection with player selection. 
+If the computer and user match => "Tie! Try again."
+
+If the combo is Rock versus paper
+    If the computer is rock => "Paper covers rock. You win!"
+    Else => "Paper covers rock. You lose. Better luck next time!"
+If the combo is rock versus scissors
+    if the computer is rock => "Rock smashes scissors. You lose. Better luck next time!"
+    else => "Rock smashes scissors. You win!"
+If the combo is scissors versus paper
+    if the computer is scissors => "Scissors cut paper. You lose. Better luck next time!"
+    Else => "Scissors cut paper. You win!"
