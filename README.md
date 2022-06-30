@@ -8,10 +8,7 @@ Required functions:
 
 computerPlay: randomly returns "Rock", "Paper", or "Scissors"
 
-use random number, assign string based on number. 
-    2-4 incl rock
-    5-7 incl paper
-    8-10 incl scissors
+Randomly assigned from array
     
 
 function2: plays one round of rock paper scissors. Requires two parameters - computerSelection and playerSelection (TOP names it playRound)
