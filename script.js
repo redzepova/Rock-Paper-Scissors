@@ -76,17 +76,37 @@ function playRound(playerSelection, computerSelection) {
         }
     } else {
         console.log("Something wacky happened. Try again.");
-    }
+    };
 
-}
+};
 
 function game() {
     playRound(playerSelection, computerSelection);
     computerSelection = computerPlay();
 
-}
-
-game();
+};
 
 console.log("Your Score: " + userScore);
 console.log("Computer Score: " + compScore);
+
+const rock = document.querySelector('#rock');
+rock.addEventListener('click', () => {
+    playerSelection = "rock";
+    console.log(playerSelection);
+    game();
+});
+
+const paper = document.querySelector('#paper');
+paper.addEventListener('click', () => {
+    playerSelection = "paper";
+    console.log(playerSelection);
+    game();
+});
+
+const scissors = document.querySelector('#scissors');
+scissors.addEventListener('click', () => {
+    playerSelection = 'scissors'
+    console.log(playerSelection);
+    game();
+});
+
