@@ -7,15 +7,15 @@ function computerNameSelector () {
     return (compNameSelections[name]);
 };
 
-
-
 const start = document.querySelector('#startBtn');
 const player = document.querySelector('#player');
 const computer = document.querySelector('#computer');
-const playerName = document.getElementById('nameInput').value;
+let computerName = "";
+let playerName = "";
 
 start.addEventListener('click', () => {
-    const computerName = computerNameSelector();
+    computerName = computerNameSelector();
+    playerName = document.getElementById('nameInput').value;
     player.textContent = `${playerName}'s Score: ${userScore}`;
     computer.textContent = `${computerName}'s Score: ${compScore}`;
 });
@@ -90,7 +90,7 @@ function game() {
     playRound(playerSelection, computerSelection);
     computerSelection = computerPlay();
     player.textContent = `${playerName}'s Score: ${userScore}`;
-    computer.textContent = `Computer's Score: ${compScore}`;
+    computer.textContent = `${computerName}'s Score: ${compScore}`;
 
 };
 
