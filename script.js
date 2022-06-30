@@ -7,8 +7,7 @@ function computerNameSelector () {
     return (compNameSelections[name]);
 };
 
-const computerName = computerNameSelector();
-console.log(computerName);
+
 
 const start = document.querySelector('#startBtn');
 const player = document.querySelector('#player');
@@ -16,7 +15,7 @@ const computer = document.querySelector('#computer');
 const playerName = document.getElementById('nameInput').value;
 
 start.addEventListener('click', () => {
-
+    const computerName = computerNameSelector();
     player.textContent = `${playerName}'s Score: ${userScore}`;
     computer.textContent = `${computerName}'s Score: ${compScore}`;
 });
