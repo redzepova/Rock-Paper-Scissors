@@ -1,21 +1,12 @@
+const start = document.querySelector('#startBtn');
+const player = document.querySelector('#player');
+const computer = document.querySelector('#computer');
 
-//Computer's move//
-
-/*function computerPlay() {
-    let i = Math.floor(Math.random() *10) + 1;
-
-    /* 2-4 = Rock
-       5-7 = Paper
-       8-10 = Scissors 
-
-    if (i < 5) {
-        return("Rock");
-    } else if (i < 8) {
-        return("Paper");
-    } else {
-        return("Scissors");
-    }
-} */
+start.addEventListener('click', () => {
+    let playerName = document.getElementById('nameInput').value;
+    player.textContent = `${playerName}'s Score: ${userScore}`;
+    computer.textContent = `Computer's Score: ${compScore}`
+});
 
 const gameChoices = ["Rock", "Paper", "Scissors"];
 
