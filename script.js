@@ -1,11 +1,14 @@
+
+
 const start = document.querySelector('#startBtn');
 const player = document.querySelector('#player');
 const computer = document.querySelector('#computer');
+const playerName = document.getElementById('nameInput').value;
 
 start.addEventListener('click', () => {
-    let playerName = document.getElementById('nameInput').value;
+
     player.textContent = `${playerName}'s Score: ${userScore}`;
-    computer.textContent = `Computer's Score: ${compScore}`
+    computer.textContent = `Computer's Score: ${compScore}`;
 });
 
 const gameChoices = ["Rock", "Paper", "Scissors"];
@@ -77,6 +80,8 @@ function playRound(playerSelection, computerSelection) {
 function game() {
     playRound(playerSelection, computerSelection);
     computerSelection = computerPlay();
+    player.textContent = `${playerName}'s Score: ${userScore}`;
+    computer.textContent = `Computer's Score: ${compScore}`;
 
 };
 
