@@ -11,23 +11,35 @@
 <!--https://coolors.co/palette/0c0f0a-ff206e-fbff12-41ead4-ffffff-->
 
 <body>
-   <div id="pageHeader">
-        <h1>Rock, Paper, Scissors</h1>
-   </div>
-   <div class="score">
-        <span>Player's Score: </span>
-   </div>
-   <div class="score">
-        <span>Computer's Score: </span>
-   </div>
-   <div class="button">
-        <div id="rock">Rock</div>
-   </div>
-   <div class="button">
-        <div id="paper">paper</div>
-   </div>
-    <div class="button">
-        <div id="scissors">Scissors</div>
-    </div>
+     <!--Pretty header should be visible the whole game-->
+     <div class="header" id="title">
+          <p>Rock, Paper, Scissors</p>
+          <div class="scoreKeeper">
+               <p id="player"></p>
+               <p id="computer"></p>
+          </div>
+
+     </div>
+     <!--Start here. Player enters info and clicks button to start game-->
+     <div id="start">
+          <input type="text" id="playerName" value="Enter your name here...">
+          <button class="gameButton">Play Now</button>
+
+     </div>
+<!--This is where the game lives-->
+     <div id="game">
+          <button id="rock">Rock</button>
+          <button id="paper">Paper</button>
+          <button id="scissors">Scissors</button>
+     </div>
+     <!--This is where the win/lose message appears, player can click 
+     button to restart game-->
+     <div id="end">
+          <div id="Final Score">
+               
+          </div>
+          <p class="endMessage"></p>
+          <button class="gameButton" id="return">Play Again</button>
+     </div>
 </body>
 </html>

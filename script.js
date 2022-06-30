@@ -36,7 +36,7 @@ let compScore = 0;
 //and computer selection. 
 
 function playRound(playerSelection, computerSelection) {
-    playerSelection = prompt("Please choose Rock, Paper, or Scissors", '');
+    //playerSelection = prompt("Please choose Rock, Paper, or Scissors", '');
     let p = playerSelection.toLowerCase();
     let c = computerSelection.toLowerCase();
     let rockVersusPaper = Boolean((p === "rock" | p === "paper")&(c === "rock" | c ==="paper"));
