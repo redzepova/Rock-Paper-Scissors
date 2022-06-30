@@ -83,12 +83,18 @@ function playRound(playerSelection, computerSelection) {
     } else {
         outcome.textContent = "Something wacky happened. Try again.";
     };
+/* Go over this section. Something is weird when paper is selected. Needs testing */
+    const userChoice = document.getElementById('userPlay');
+    const compChoice = document.getElementById('computerPlay');
+    userChoice.textContent = `${playerName} played ${playerSelection}.`
+    compChoice.textContent = `${computerName} played ${computerSelection}.`
 
 };
 
 function game() {
     playRound(playerSelection, computerSelection);
     computerSelection = computerPlay();
+
     player.textContent = `${playerName}'s Score: ${userScore}`;
     computer.textContent = `${computerName}'s Score: ${compScore}`;
 
