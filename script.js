@@ -1,3 +1,5 @@
+//computer name selector//
+
 const compNameSelections = ['Albert', 'HAL 9000', 'Mother', 'Data', 
     'Mrs. Robinson', 'Mr. Roboto','The Undisputed Champion of Rock Paper Scissors', 
     'Eliza Doolittle', 'Jane Austin', 'TARDIS'];
@@ -7,6 +9,7 @@ function computerNameSelector () {
     return (compNameSelections[name]);
 };
 
+//interactive buttons//
 const start = document.querySelector('#startBtn');
 const player = document.querySelector('#player');
 const computer = document.querySelector('#computer');
@@ -18,7 +21,10 @@ start.addEventListener('click', () => {
     playerName = document.getElementById('nameInput').value;
     player.textContent = `${playerName}'s Score: ${playerScore}`;
     computer.textContent = `${computerName}'s Score: ${compScore}`;
+    return computerName;
 });
+
+//Computer makes a choice//
 
 const gameChoices = ["Rock", "Paper", "Scissors"];
 
@@ -27,27 +33,14 @@ function computerPlay() {
     return(gameChoices[choice]);
 }
 
+//initial declaration of variables//
+
 let playerSelection = "";
 let computerSelection = "";
 
 
 let playerScore = 0
 let compScore = 0
-
-// likely they don't match, so exclude matching first. then move on
-
-// play a round. case-insensitive comparison of player selection
-//and computer selection. 
-
-/*
-      
-    const userChoice = document.getElementById('userPlay');
-    const compChoice = document.getElementById('computerPlay');
-    userChoice.textContent = `${playerName} played ${playerSelection}.`
-    compChoice.textContent = `${computerName} played ${computerSelection}.`
-    console.log(computerSelection);
-
-*/
 
 console.log("Your Score: " + playerScore);
 console.log("Computer Score: " + compScore);
@@ -111,11 +104,14 @@ scissors.addEventListener('click', () => {
     } else {
         outcome = playerWins();
     };
-console.log(outcome);
+//console.log(outcome);
 console.log(playerScore);
 console.log(compScore);
 //game();
 });
+
+const outcomeMessage = document.querySelector('#outcome');
+console.log(outcome);
 
 
 
