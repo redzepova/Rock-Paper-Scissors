@@ -1,4 +1,14 @@
+const compNameSelections = ['Albert', 'HAL 9000', 'Mother', 'Data', 
+    'Mrs. Robinson', 'Mr. Roboto','The Undisputed Champion of Rock Paper Scissors', 
+    'Eliza Doolittle', 'Jane Austin', 'TARDIS'];
 
+function computerNameSelector () {
+    let name = Math.floor(Math.random() * compNameSelections.length);
+    return (compNameSelections[name]);
+};
+
+const computerName = computerNameSelector();
+console.log(computerName);
 
 const start = document.querySelector('#startBtn');
 const player = document.querySelector('#player');
@@ -8,7 +18,7 @@ const playerName = document.getElementById('nameInput').value;
 start.addEventListener('click', () => {
 
     player.textContent = `${playerName}'s Score: ${userScore}`;
-    computer.textContent = `Computer's Score: ${compScore}`;
+    computer.textContent = `${computerName}'s Score: ${compScore}`;
 });
 
 const gameChoices = ["Rock", "Paper", "Scissors"];
