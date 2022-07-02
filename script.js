@@ -18,8 +18,9 @@ const cScore = document.querySelector('#computerScore');
 let computerName = '';
 let playerName = '';
 let winner = ''
-let playerScore = 0
-let compScore = 0
+let winningPlay = ''
+let player = 0
+let computer = 0
 
 //fix this. pressing this button resets scores, but now they aren't automatically updating//
 start.addEventListener('click', () => {
@@ -27,11 +28,14 @@ start.addEventListener('click', () => {
     playerName = document.getElementById('nameInput').value;
     playerScore = 0;
     compScore = 0;
-    p.textContent = `${playerName}'s Score: ${playerScore}`;
-    c.textContent = `${computerName}'s Score: ${compScore}`;
+    //Once player hit's the 'play button, names and scores populate
+    pName.textContent = `${playerName}'s Score: `;
+    pScore.textContent = `${player}`;
+    cName.textContent = `${computerName}'s Score: `;
+    cScore.textContent = `${computer}`;
 });
 
-//Computer makes a choice//
+//Computer choice function
 
 const gameChoices = ["Rock", "Paper", "Scissors"];
 
