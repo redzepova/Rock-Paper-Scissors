@@ -13,8 +13,10 @@ function computerNameSelector () {
 const start = document.querySelector('#startBtn');
 const player = document.querySelector('#player');
 const computer = document.querySelector('#computer');
-let computerName = "";
-let playerName = "";
+let computerName = '';
+let playerName = '';
+let winner = ''
+let winningPlay = ''
 let playerScore = 0
 let compScore = 0
 
@@ -43,7 +45,7 @@ function computerPlay() {
 let playerSelection = "";
 let computerSelection = "";
 
-console.log("Your Score: " + playerScore);
+/*console.log("Your Score: " + playerScore);
 console.log("Computer Score: " + compScore);
 let outcome = '';
 
@@ -112,7 +114,64 @@ console.log(compScore);
 
 const outcomeMessage = document.querySelector('#outcome');
 outcomeMessage.textContent = outcome;
-console.log(outcome);
+console.log(outcome); */
+
+function tie() {
+    return 'Tie! No one wins! Try again.';
+}
+
+function winMessage(winningPlay) {
+    if (winningPlay = 'Paper') {
+        return 'Paper covers rock!';
+    } else if (winningPlay = 'Rock') {
+        return 'Rock smashes scissors!';
+    } else {
+        return 'Scissors cut paper!';
+    };
+};
+
+//Player selects rock. Compare choices and return winner.
+const rock = document.querySelector('#rock');
+rock.addEventListener('click', () => {
+    playerSelection = 'Rock';
+    computerSelection = computerPlay (); //Computer makes choice after player.
+    console.log(computerSelection);
+    if (computerSelection === playerSelection) {
+        outcome = tie();
+        console.log(outcome);
+    } else if (computerSelection === 'Paper') {
+        winningplay = 'Paper';
+        outcome = winMessage(winningPlay);
+        console.log(outcome);
+    } else {
+        winningPlay = 'Scissors';
+        outcome = winMessage(winningPlay);
+        console.log(outcome);
+    }
+});
+
+const paper = document.querySelector('#paper');
+paper.addEventListener('click', () => {
+    computerSelection = computerPlay();
+})
+
+const scissors = document.queryCommandIndeterm('#scissors');
+//scissors.addEventListener('click', () => {
+//    computerSelection = computerPlay();
+//})
+
+function updateScore (winner) {
+    if (winner === 'computer') {
+        compScore = ++compScore;
+        console.log(compScore);
+        console.log(playerScore);
+    } else {
+        playerScore = ++playerScore;
+        console.log(compScore);
+        console.log(playerScore);
+    };
+};
+
 
 
 
