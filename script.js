@@ -11,8 +11,10 @@ function computerNameSelector () {
 
 //interactive buttons//
 const start = document.querySelector('#startBtn');
-const p = document.querySelector('#player');
-const c = document.querySelector('#computer');
+const pName = document.querySelector('#playerName');
+const cName = document.querySelector('#computerName');
+const pScore = document.querySelector('#playerScore');
+const cScore = document.querySelector('#computerScore');
 let computerName = '';
 let playerName = '';
 let winner = ''
