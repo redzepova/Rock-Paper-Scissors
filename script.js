@@ -24,7 +24,7 @@ let playerChoice = '';
 let computerChoice = '';
 let winningPlay = 'Butthole';
 
-//updated DOMS
+//updated DOM
 outcome = document.querySelector('#outcome');
 winnerMessage = document.querySelector('#winner');
 playerChose = document.querySelector('#playerChose');
@@ -84,7 +84,7 @@ rock.addEventListener('click', () => {
     };
 });
 
-/*const paper = document.querySelector('#Paper');
+const paper = document.querySelector('#Paper');
 paper.addEventListener('click', () => {
     playerChoice ='Paper';
     computerChoice = computerPlay();
@@ -113,7 +113,7 @@ scissors.addEventListener('click', () => {
         winningPlay = playGame(playerChoice, computerChoice);
         determineWinner(winningPlay, playerChoice);
     };
-}); */
+}); 
 
 
 function playGame (p, c) {
@@ -126,7 +126,6 @@ function playGame (p, c) {
         outcome.textContent = `Paper covers rock.`;
     } else if (rockVersusScissors) {
         winningPlay = 'Rock';
-        console.log(winningPlay);
         outcome.textContent ='Rock smashes scissors.';
     } else if (paperVersusScissors) {
         winningPlay = 'Scissors';
