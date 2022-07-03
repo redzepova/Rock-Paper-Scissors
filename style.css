@@ -71,6 +71,8 @@ h1 {
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
+    background-color: #0C0F0A;
+    color: #FFFFFF;
 }
 
 .selection{
