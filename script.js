@@ -53,13 +53,6 @@ function computerPlay() {
     return(gameChoices[choice]);
 }
 
-
- 
-function tie() {
-    console.log('tie');
-    return 'Tie';
-}
-
 function determineWinner(wp, p) {
     if (wp === p) {
         winner === playerName;
@@ -87,7 +80,7 @@ rock.addEventListener('click', () => {
     };
 });
 
-const paper = document.querySelector('#Paper');
+/*const paper = document.querySelector('#Paper');
 paper.addEventListener('click', () => {
     playerChoice ='Paper';
     computerChoice = computerPlay();
@@ -116,7 +109,7 @@ scissors.addEventListener('click', () => {
         winningPlay = playGame(playerChoice, computerChoice);
         determineWinner(winningPlay, playerChoice);
     };
-});
+}); */
 
 
 function playGame (p, c) {
