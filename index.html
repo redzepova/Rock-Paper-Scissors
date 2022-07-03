@@ -31,9 +31,11 @@
      </div>
 <!--This is where the game lives-->
      <div id="game">
-          <button class="selection" id="Rock" onclick=>Rock</button>
-          <button class="selection" id="Paper">Paper</button>
-          <button class="selection" id="Scissors">Scissors</button>
+          <div id="gameSelections">
+               <button class="selection" id="Rock">Rock</button>
+               <button class="selection" id="Paper">Paper</button>
+               <button class="selection" id="Scissors">Scissors</button>
+          </div>
           <p id="playerChose"></p>
           <p id="computerChose"></p>
           <span id="outcome"></span>
@@ -43,8 +45,10 @@
      <!--This is where the win/lose message appears, player can click 
      button to restart game-->
      <div id="end">
-          <p class="endMessage"></p>
+          <p id="endMessage"></p>
           <button class="gameButton" id="return">Play Again</button>
      </div>
+
+     <footer></footer>
 </body>
 </html>
