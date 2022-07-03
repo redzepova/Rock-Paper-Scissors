@@ -55,11 +55,15 @@ function computerPlay() {
 
 function determineWinner(wp, p) {
     if (wp === p) {
-        winner === playerName;
         winnerMessage.textContent = 'You win! Play again, winner!'
+        player = ++player;
+        pScore.textContent = player;
+        console.log(player);
     } else {
-        winner === computerName;
         winnerMessage.textContent = `${computerName} won this round. Too bad. Try again!`
+        computer = ++computer;
+        cScore.textContent = computer;
+        console.log(computer);
     };
 };
 
@@ -134,6 +138,7 @@ function playGame (p, c) {
     return winningPlay;
 
 };
+
 
 
 
