@@ -13,30 +13,27 @@
 
 <body>
      <!--Pretty header should be visible the whole game-->
-     <div class="header">
+     <header class="header">
           <h1>Rock, Paper, Scissors</h1>
           <div class="scoreKeeper">
-               <div class="scoreKeeper" id="PlayerInfo">
-                    <span class="scoreInfo" id="playerName"></span>
-                    <span class="scoreInfo" id="playerScore"></span>
-               </div>
-               <div class="scoreKeeper" id="ComputerInfo">
-                    <span class="scoreInfo" id="computerName"></span>
-                    <span class="scoreInfo" id="computerScore"></span>
-               </div>
+               <p class="scoreInfo" id="playerName"></p>
+               <p class="scoreInfo" id="playerScore"></p>
+               <p class="scoreInfo" id="computerName"></p>
+               <p class="scoreInfo" id="computerScore"></p>
           </div>
-     </div>
+     </header>
      <!--Start here. Player enters info and clicks button to start game-->
      <div id="start">
-          <input type="text" id="nameInput" value="Enter your name here...">
+          <label for="nameInput">Enter your name to begin the battle...</label>
+          <input type="text" id="nameInput" value="">
           <button class = "gameBtn" id="startBtn">Play Now</button>
 
      </div>
 <!--This is where the game lives-->
      <div id="game">
-          <button id="Rock" onclick=>Rock</button>
-          <button id="Paper">Paper</button>
-          <button id="Scissors">Scissors</button>
+          <button class="selection" id="Rock" onclick=>Rock</button>
+          <button class="selection" id="Paper">Paper</button>
+          <button class="selection" id="Scissors">Scissors</button>
           <p id="playerChose"></p>
           <p id="computerChose"></p>
           <span id="outcome"></span>

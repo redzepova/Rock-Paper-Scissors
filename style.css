@@ -29,3 +29,8 @@ h1 {
 .scoreInfo {
     margin: 1rem;
 }
+
+#start{
+    display: flex;
+    flex-direction: column;
+}
