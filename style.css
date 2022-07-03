@@ -7,7 +7,7 @@
     background-color: #0C0F0A;
     color: #FF206E
 }
-h1{
+h1 {
     font-family: 'Bebas Neue', cursive;
     font-size: 8rem;
     align-content: center;
@@ -16,12 +16,16 @@ h1{
     align-self: center
 }
 
-.scoreKeeper{
+.scoreKeeper {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     font-size: 2rem;
-    padding: 1rem;
+    padding: .5rem;
     background-color: #FF206E;
     color: #0C0F0A;
+}
+
+.scoreInfo {
+    margin: 1rem;
 }
