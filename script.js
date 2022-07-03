@@ -39,6 +39,8 @@ playAgain = document.querySelector('#return');
 scoreKeeper = document.querySelector('.scoreKeeper')
 scoreKeeper.style.visibility = 'hidden';
 endMessage = document.querySelector('#endMessage');
+returnMessage = document.querySelector('#returnMessage');
+returnMessage.style.visibility = 'hidden';
 
 
 playAgain.addEventListener ('click', () => {
@@ -95,6 +97,7 @@ const rock = document.querySelector('#Rock');
 rock.addEventListener('click', () => {
     playerChoice ='Rock';
     computerChoice = computerPlay();
+    returnMessage.style.visibility = 'visible';
     playerChose.textContent = `You played ${playerChoice}. `;
     computerChose.textContent = `${computerName} played ${computerChoice}. `;
     if (playerChoice === computerChoice) {
@@ -111,6 +114,7 @@ const paper = document.querySelector('#Paper');
 paper.addEventListener('click', () => {
     playerChoice ='Paper';
     computerChoice = computerPlay();
+    returnMessage.style.visibility = 'visible';
     playerChose.textContent = `You played ${playerChoice}. `;
     computerChose.textContent = `${computerName} played ${computerChoice}. `;
     if (playerChoice === computerChoice) {
@@ -129,6 +133,7 @@ const scissors = document.querySelector('#Scissors');
 scissors.addEventListener('click', () => {
     playerChoice ='Scissors';
     computerChoice = computerPlay();
+    returnMessage.style.visibility = 'visible';
     playerChose.textContent = `You played ${playerChoice}. `;
     computerChose.textContent = `${computerName} played ${computerChoice}. `;
     if (playerChoice === computerChoice) {
@@ -175,6 +180,7 @@ function keepScore() {
         endMessage.textContent = `${computerName} remains champion. Live to fight another day, ${playerName}.`
     };
 };
+
 
 
 

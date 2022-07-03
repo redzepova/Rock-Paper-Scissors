@@ -13,11 +13,11 @@ body {
 }
 h1 {
     font-family: 'Bebas Neue', cursive;
-    font-size: 8rem;
+    font-size: 12vw;
     align-content: center;
     margin-top: 8px;
     align-self: center;
-    height: 7rem;
+    height: 7vw;
     flex-shrink: 2;
 }
 
@@ -25,10 +25,26 @@ h1 {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    font-size: 2rem;
-    padding: .5rem;
+    font-size: 5vw;
+    padding: .5vw;
     background-color:#0C0F0A;
     color: #FF206E;
+}
+
+#playerName {
+    flex-shrink: 1;
+}
+
+#playerScore {
+    flex-shrink: 2;
+}
+
+#computerName {
+    flex-shrink: 1;
+}
+
+#computerScore {
+    flex-shrink: 2;
 }
 
 .scoreInfo {
@@ -40,7 +56,7 @@ h1 {
     display: flex;
     flex-direction: column;
     font-family: 'Bebas Neue', sans-serif;
-    font-size: 2rem ;
+    font-size: 3vw ;
     background-color: #FF206E;
     margin: 0px;
     padding: 8px;
@@ -55,7 +71,7 @@ h1 {
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
-    font-size: 2rem;
+    font-size: 3vw;
     font-family: 'Kantumruy Pro', sans-serif;
 }
 
@@ -69,19 +85,21 @@ h1 {
 
 #returnMessage {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     flex-wrap: wrap;
     background-color: #0C0F0A;
     color: #FFFFFF;
+    margin: 2vw;
+    padding: 2vw
 }
 
 .selection{
     align-items: center;
     justify-content: space-between;
-    height: 17rem;
-    width: 17rem;
+    height: 25vw;
+    width: 25vw;
     font-family: 'Bebas Neue', sans-serif;
-    font-size: 5rem;
+    font-size: 7vw;
     background-color: #0C0F0A;
     color: #FF206E;
     transition-duration: 0.4s;
@@ -99,7 +117,7 @@ h1 {
     justify-content: space-between;
     border-color: #FF206E;
     border-style: solid;
-    padding: 2rem;
+    padding: 5vw;
 }
 
 #end {
@@ -119,7 +137,7 @@ h1 {
     height: auto;
     width: auto;
     font-family: 'Bebas Neue', sans-serif;
-    font-size: 5rem;
+    font-size: 10vwS;
     background-color: #0C0F0A;
     color: #FF206E;
     border-color: #0C0F0A;
