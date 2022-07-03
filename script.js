@@ -17,10 +17,19 @@ const pScore = document.querySelector('#playerScore');
 const cScore = document.querySelector('#computerScore');
 let computerName = '';
 let playerName = '';
-let winner = ''
-let winningPlay = ''
-let player = 0
-let computer = 0
+let winner = '';
+let player = 0;
+let computer = 0;
+let playerChoice = '';
+let computerChoice = '';
+let winningPlay = 'Butthole';
+
+//updated DOMS
+outcome = document.querySelector('#outcome');
+winnerMessage = document.querySelector('#winner');
+playerChose = document.querySelector('#playerChose');
+computerChose = document.querySelector('#computerChose');
+
 
 //fix this. pressing this button resets scores, but now they aren't automatically updating//
 start.addEventListener('click', () => {
@@ -44,10 +53,6 @@ function computerPlay() {
     return(gameChoices[choice]);
 }
 
-//initial declaration of variables//
-
-let playerSelection = "";
-let computerSelection = "";
 
  
 function tie() {
@@ -55,103 +60,86 @@ function tie() {
     return 'Tie';
 }
 
+function determineWinner(wp, p) {
+    if (wp === p) {
+        winner === playerName;
+        winnerMessage.textContent = 'You win! Play again, winner!'
+    } else {
+        winner === computerName;
+        winnerMessage.textContent = `${computerName} won this round. Too bad. Try again!`
+    };
+};
+
 
 //Player selects rock. Compare choices and return winner.
-const rock = document.querySelector('#rock');
+const rock = document.querySelector('#Rock');
 rock.addEventListener('click', () => {
-    playerSelection = 'Rock';
-    computerSelection = computerPlay(); //Computer makes choice after player.
-    console.log(computerSelection);
-    if (playerSelection === computerSelection){
-        winner === tie();
+    playerChoice ='Rock';
+    computerChoice = computerPlay();
+    playerChose.textContent = `You played ${playerChoice}. `;
+    computerChose.textContent = `${computerName} played ${computerChoice}. `;
+    if (playerChoice === computerChoice) {
+        outcome.textContent = `Tie! No one wins. Try again.`
+        winnerMessage.textContent = '';
     } else {
-        winner = playGame(playerSelection, computerSelection);
-        console.log(winner);
+        winningPlay = playGame(playerChoice, computerChoice);
+        determineWinner(winningPlay, playerChoice);
     };
-
-    if (winner === 'Computer') {
-        outcome = 'Paper covers rock. Try again!';
-    } else if (winner === 'Player') {
-        outcome = 'Paper smashes scissors. You win!';
-    } else {
-        outcome = 'Tie. You didn\'t lose, but you didn\'t win either.'
-    };
-    console.log(outcome);
 });
 
-const paper = document.querySelector('#paper');
+const paper = document.querySelector('#Paper');
 paper.addEventListener('click', () => {
-    playerSelection = 'Paper';
-    computerSelection = computerPlay();
-    console.log(computerSelection);
-    if (playerSelection === computerSelection){
-        outcome === tie();
+    playerChoice ='Paper';
+    computerChoice = computerPlay();
+    playerChose.textContent = `You played ${playerChoice}. `;
+    computerChose.textContent = `${computerName} played ${computerChoice}. `;
+    if (playerChoice === computerChoice) {
+        outcome.textContent = `Tie! No one wins. Try again.`
+        winnerMessage.textContent = '';
     } else {
-        winner = playGame(playerSelection, computerSelection);
-        console.log(winner);
+        winningPlay = playGame(playerChoice, computerChoice);
+        determineWinner(winningPlay, playerChoice);
     };
-
-    if (winner === 'Computer') {
-        outcome = 'Scissors cut paper. You lose!';
-    } else if (winner === 'Player') {
-        outcome = 'Paper covers rock. You win!';
-    } else {
-        outcome = 'Tie. You didn\'t lose, but you didn\'t win either.'
-    };
-    console.log(outcome);
 });
+   
 
-const scissors = document.querySelector('#scissors');
+const scissors = document.querySelector('#Scissors');
 scissors.addEventListener('click', () => {
-    playerSelection = 'Scissors';
-    computerSelection = computerPlay();
-    console.log(computerSelection);
-    if (playerSelection === computerSelection){
-        outcome === tie();
+    playerChoice ='Scissors';
+    computerChoice = computerPlay();
+    playerChose.textContent = `You played ${playerChoice}. `;
+    computerChose.textContent = `${computerName} played ${computerChoice}. `;
+    if (playerChoice === computerChoice) {
+        outcome.textContent = `Tie! No one wins. Try again.`
+        winnerMessage.textContent = '';
     } else {
-        winner = playGame(playerSelection, computerSelection);
-        console.log(winner);
+        winningPlay = playGame(playerChoice, computerChoice);
+        determineWinner(winningPlay, playerChoice);
     };
-
-    if (winner === 'Computer') {
-        outcome = 'Rock smashes scissors. You lose!';
-    } else if (winner === 'Player') {
-        outcome = 'Scissors cut paper. You win!';
-    } else {
-        outcome = 'Tie. You didn\'t lose, but you didn\'t win either.'
-    };
-    console.log(outcome);
 });
+
 
 function playGame (p, c) {
-    let rockVersusPaper = Boolean((p === 'Rock' | p === 'Paper')&
-        (c === 'Rock' | c === 'Paper'));
-    let rockVersusScissors = Boolean((p === 'Rock' | p === 'Scissors')&
-        (c === 'Rock' | c === 'Scissors'));
-    let paperVersusScissors = Boolean((p === 'Paper' | p === 'Scissors')&
-        (c === 'Paper' | c === 'Scissors'));
+    let rockVersusPaper = Boolean((p === 'Rock' || p === 'Paper')&&(c === 'Rock' || c === 'Paper'));
+    let rockVersusScissors = Boolean((p === 'Rock' || p === 'Scissors') && (c === 'Scissors' || c === 'Rock'));
+    let paperVersusScissors = Boolean((p === 'Paper' || p === 'Scissors')&&(c === 'Paper' || c === 'Scissors'));
     
     if (rockVersusPaper) {
-        if(computerSelection === 'Paper') {
-            return 'Computer';
-        } else {
-            return 'Player';
-        };
+        winningPlay = 'Paper';
+        outcome.textContent = `Paper covers rock.`;
     } else if (rockVersusScissors) {
-        if(computerSelection === 'Rock') {
-            return 'Computer';
-        } else {
-            return 'Player';
-        };
+        winningPlay = 'Rock';
+        console.log(winningPlay);
+        outcome.textContent ='Rock smashes scissors.';
     } else if (paperVersusScissors) {
-        if(computerSelection === 'Scissors') {
-            return 'Computer';
-        } else {
-            return 'Player';
-        };
+        winningPlay = 'Scissors';
+        outcome.textContent = 'Scissors cut paper.';
     } else {
-        return 'Error'
+        winningPlay = 'Error';
+        outcome.textContent = 'Something went wrong.';
     };
+    return winningPlay;
+
 };
 
 
