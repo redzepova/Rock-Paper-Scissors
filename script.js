@@ -29,6 +29,21 @@ outcome = document.querySelector('#outcome');
 winnerMessage = document.querySelector('#winner');
 playerChose = document.querySelector('#playerChose');
 computerChose = document.querySelector('#computerChose');
+startBin = document.querySelector('#start');
+startBin.style.display = 'block';
+endBin = document.querySelector('#end');
+endBin.style.display = 'none';
+gameBin = document.querySelector('#game');
+gameBin.style.display = 'none';
+playAgain = document.querySelector('#return');
+
+
+playAgain.addEventListener ('click', () => {
+    endBin.style.display = 'none';
+    player = 0;
+    computer = 0;
+    startBin.style.display = 'block';
+})
 
 
 //fix this. pressing this button resets scores, but now they aren't automatically updating//
@@ -42,6 +57,8 @@ start.addEventListener('click', () => {
     pScore.textContent = `${player}`;
     cName.textContent = `${computerName}'s Score: `;
     cScore.textContent = `${computer}`;
+    startBin.style.display = 'none';
+    gameBin.style.display = 'block';
 });
 
 //Computer choice function
@@ -145,6 +162,8 @@ function playGame (p, c) {
 function keepScore() {
     if (player === 5 || computer === 5) {
         console.log('end the game now');
+        endBin.style.display = 'block';
+        gameBin.style.display = 'none';
     } else {
         console.log('not at 5 or error');
     };
