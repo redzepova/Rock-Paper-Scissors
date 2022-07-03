@@ -1,19 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Kantumruy+Pro:wght@300&display=swap');
-
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: #FF206E;
+}
 .header {
     display: flex;
     flex-direction: column;
-    margin: 8px;
     background-color: #0C0F0A;
-    color: #FF206E
+    color: #FF206E;
+    margin: 0px;
 }
 h1 {
     font-family: 'Bebas Neue', cursive;
     font-size: 8rem;
     align-content: center;
     margin-top: 8px;
-    margin-bottom: 8px;
-    align-self: center
+    align-self: center;
+    height: 7rem;
 }
 
 .scoreKeeper {
@@ -22,15 +26,69 @@ h1 {
     justify-content: space-evenly;
     font-size: 2rem;
     padding: .5rem;
-    background-color: #FF206E;
-    color: #0C0F0A;
+    background-color:#0C0F0A;
+    color: #FF206E;
 }
 
 .scoreInfo {
     margin: 1rem;
+    font-family: 'Kantumruy Pro', sans-serif;
 }
 
 #start{
     display: flex;
     flex-direction: column;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2rem ;
+    background-color: #FF206E;
+    margin: 0px;
+    padding: 8px;
+    color: #0C0F0A;
+}
+
+#nameInput {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 2rem;
+    font-family: 'Kantumruy Pro', sans-serif;
+}
+
+#game {
+    display: flex;  
+    padding: 3rem;
+    background-color: #FFFFFF ;
+    font-family: 'Kantumruy Pro', sans-serif;
+    font-size: 2rem;
+}
+
+.selection{
+    align-items: center;
+    justify-content: space-between;
+    height: 17rem;
+    width: 17rem;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 5rem;
+    background-color: #0C0F0A;
+    color: #FF206E;
+    transition-duration: 0.4s;
+}
+
+.selection:hover{
+    background-color: #FFFFFF;
+    color: #0C0F0A;
+    border-color: #0C0F0A;
+    border-style: inset;
+}
+
+#gameSelections {
+    display: flex;
+    justify-content: space-between;
+    border-color: #FF206E;
+    border-style: solid;
+    padding: 2rem;
 }
