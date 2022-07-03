@@ -22,7 +22,7 @@ let player = 0;
 let computer = 0;
 let playerChoice = '';
 let computerChoice = '';
-let winningPlay = 'Butthole';
+let winningPlay = '';
 
 //updated DOM
 outcome = document.querySelector('#outcome');

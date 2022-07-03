@@ -18,6 +18,7 @@ h1 {
     margin-top: 8px;
     align-self: center;
     height: 7rem;
+    flex-shrink: 2;
 }
 
 .scoreKeeper {
@@ -66,6 +67,12 @@ h1 {
     font-size: 2rem;
 }
 
+#returnMessage {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
 .selection{
     align-items: center;
     justify-content: space-between;
@@ -91,4 +98,37 @@ h1 {
     border-color: #FF206E;
     border-style: solid;
     padding: 2rem;
+}
+
+#end {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 4rem ;
+    background-color: #FF206E;
+    margin: 0px;
+    padding: 8px;
+    color: #0C0F0A;
+}
+
+.gameBtn {
+    align-items: center;
+    justify-content: space-between;
+    height: auto;
+    width: auto;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 5rem;
+    background-color: #0C0F0A;
+    color: #FF206E;
+    border-color: #0C0F0A;
+    border-style: solid;
+    transition-duration: 0.4s;
+}
+
+.gameBtn:hover {
+    background-color: #FF206E;
+    color: #0C0F0A;
+    border-color: #0C0F0A;
+    border-style: solid;
+    transition-duration: 0.4s;
 }
