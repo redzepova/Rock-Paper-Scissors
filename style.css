@@ -37,6 +37,7 @@ h1 {
 
 #playerScore {
     flex-shrink: 2;
+    font-size: 4vw;
 }
 
 #computerName {
@@ -45,10 +46,11 @@ h1 {
 
 #computerScore {
     flex-shrink: 2;
+    font-size: 4vw;
 }
 
 .scoreInfo {
-    margin: 1rem;
+    margin: 1vw;
     font-family: 'Kantumruy Pro', sans-serif;
 }
 
@@ -89,7 +91,7 @@ h1 {
     flex-wrap: wrap;
     background-color: #0C0F0A;
     color: #FFFFFF;
-    margin: 2vw;
+    margin-top: 2vw;
     padding: 2vw
 }
 
