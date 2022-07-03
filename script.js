@@ -38,6 +38,7 @@ gameBin.style.display = 'none';
 playAgain = document.querySelector('#return');
 scoreKeeper = document.querySelector('.scoreKeeper')
 scoreKeeper.style.visibility = 'hidden';
+endMessage = document.querySelector('#endMessage');
 
 
 playAgain.addEventListener ('click', () => {
@@ -168,8 +169,10 @@ function keepScore() {
         console.log('end the game now');
         endBin.style.display = 'block';
         gameBin.style.display = 'none';
+    } else if(player === 5) {
+        endMessage.textContent = `The new champion of Rock Paper Scissors: ${playerName}! Congratulations!`
     } else {
-        console.log('not at 5 or error');
+        endMessage.textContent = `${computerName} remains champion. Live to fight another day, ${playerName}.`
     };
 };
 
