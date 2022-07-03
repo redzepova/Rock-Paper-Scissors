@@ -82,6 +82,7 @@ rock.addEventListener('click', () => {
         winningPlay = playGame(playerChoice, computerChoice);
         determineWinner(winningPlay, playerChoice);
     };
+    keepScore();
 });
 
 const paper = document.querySelector('#Paper');
@@ -97,7 +98,9 @@ paper.addEventListener('click', () => {
         winningPlay = playGame(playerChoice, computerChoice);
         determineWinner(winningPlay, playerChoice);
     };
+    keepScore();
 });
+
    
 
 const scissors = document.querySelector('#Scissors');
@@ -113,6 +116,7 @@ scissors.addEventListener('click', () => {
         winningPlay = playGame(playerChoice, computerChoice);
         determineWinner(winningPlay, playerChoice);
     };
+    keepScore();
 }); 
 
 
@@ -136,6 +140,14 @@ function playGame (p, c) {
     };
     return winningPlay;
 
+};
+
+function keepScore() {
+    if (player === 5 || computer === 5) {
+        console.log('end the game now');
+    } else {
+        console.log('not at 5 or error');
+    };
 };
 
 
