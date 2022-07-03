@@ -79,12 +79,12 @@ function computerPlay() {
 
 function determineWinner(wp, p) {
     if (wp === p) {
-        winnerMessage.textContent = 'You win! Play again, winner!'
+        winnerMessage.textContent = 'You win! Play again, winner! '
         player = ++player;
         pScore.textContent = player;
         console.log(player);
     } else {
-        winnerMessage.textContent = `${computerName} won this round. Too bad. Try again!`
+        winnerMessage.textContent = `${computerName} won this round. Too bad. Try again! `
         computer = ++computer;
         cScore.textContent = computer;
         console.log(computer);
@@ -101,7 +101,7 @@ rock.addEventListener('click', () => {
     playerChose.textContent = `You played ${playerChoice}. `;
     computerChose.textContent = `${computerName} played ${computerChoice}. `;
     if (playerChoice === computerChoice) {
-        outcome.textContent = `Tie! No one wins. Try again.`
+        outcome.textContent = `Tie! No one wins. Try again. `
         winnerMessage.textContent = '';
     } else {
         winningPlay = playGame(playerChoice, computerChoice);
@@ -118,7 +118,7 @@ paper.addEventListener('click', () => {
     playerChose.textContent = `You played ${playerChoice}. `;
     computerChose.textContent = `${computerName} played ${computerChoice}. `;
     if (playerChoice === computerChoice) {
-        outcome.textContent = `Tie! No one wins. Try again.`
+        outcome.textContent = `Tie! No one wins. Try again. `
         winnerMessage.textContent = '';
     } else {
         winningPlay = playGame(playerChoice, computerChoice);
@@ -137,7 +137,7 @@ scissors.addEventListener('click', () => {
     playerChose.textContent = `You played ${playerChoice}. `;
     computerChose.textContent = `${computerName} played ${computerChoice}. `;
     if (playerChoice === computerChoice) {
-        outcome.textContent = `Tie! No one wins. Try again.`
+        outcome.textContent = `Tie! No one wins. Try again. `
         winnerMessage.textContent = '';
     } else {
         winningPlay = playGame(playerChoice, computerChoice);
@@ -154,16 +154,16 @@ function playGame (p, c) {
     
     if (rockVersusPaper) {
         winningPlay = 'Paper';
-        outcome.textContent = `Paper covers rock.`;
+        outcome.textContent = `Paper covers rock. `;
     } else if (rockVersusScissors) {
         winningPlay = 'Rock';
-        outcome.textContent ='Rock smashes scissors.';
+        outcome.textContent ='Rock smashes scissors. ';
     } else if (paperVersusScissors) {
         winningPlay = 'Scissors';
-        outcome.textContent = 'Scissors cut paper.';
+        outcome.textContent = 'Scissors cut paper. ';
     } else {
         winningPlay = 'Error';
-        outcome.textContent = 'Something went wrong.';
+        outcome.textContent = 'Something went wrong. ';
     };
     return winningPlay;
 
@@ -175,9 +175,9 @@ function keepScore() {
         endBin.style.display = 'block';
         gameBin.style.display = 'none';
     } else if(player === 5) {
-        endMessage.textContent = `The new champion of Rock Paper Scissors: ${playerName}! Congratulations!`
+        endMessage.textContent = `The new champion of Rock Paper Scissors: ${playerName}! Congratulations! `
     } else {
-        endMessage.textContent = `${computerName} remains champion. Live to fight another day, ${playerName}.`
+        endMessage.textContent = `${computerName} remains champion. Live to fight another day, ${playerName}. `
     };
 };
 

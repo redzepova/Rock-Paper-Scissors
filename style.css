@@ -95,13 +95,18 @@ h1 {
     padding: 2vw
 }
 
+.return{
+    margin: 2px;
+    padding: 2px;
+}
+
 .selection{
     align-items: center;
     justify-content: space-between;
-    height: 25vw;
-    width: 25vw;
+    height: 15vw;
+    width: 15vw;
     font-family: 'Bebas Neue', sans-serif;
-    font-size: 7vw;
+    font-size: 4vw;
     background-color: #0C0F0A;
     color: #FF206E;
     transition-duration: 0.4s;
@@ -139,7 +144,7 @@ h1 {
     height: auto;
     width: auto;
     font-family: 'Bebas Neue', sans-serif;
-    font-size: 10vw;
+    font-size: 13vw;
     background-color: #0C0F0A;
     color: #FF206E;
     border-color: #0C0F0A;
