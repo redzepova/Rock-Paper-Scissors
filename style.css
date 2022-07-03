@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Kantumruy+Pro:wght@300&display=swap');
+
+.header {
+    display: flex;
+    flex-direction: column;
+    margin: 8px;
+    background-color: #0C0F0A;
+    color: #FF206E
+}
+h1{
+    font-family: 'Bebas Neue', cursive;
+    font-size: 8rem;
+    align-content: center;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    align-self: center
+}
+
+.scoreKeeper{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    font-size: 2rem;
+    padding: 1rem;
+    background-color: #FF206E;
+    color: #0C0F0A;
+}

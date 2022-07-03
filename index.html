@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+     <link rel ="stylesheet" href ="style.css">
     <script src = "script.js" defer></script>
     <title>Rock, Paper, Scissors</title>
 </head>
@@ -12,8 +13,8 @@
 
 <body>
      <!--Pretty header should be visible the whole game-->
-     <div class="header" id="title">
-          <p>Rock, Paper, Scissors</p>
+     <div class="header">
+          <h1>Rock, Paper, Scissors</h1>
           <div class="scoreKeeper">
                <div class="scoreKeeper" id="PlayerInfo">
                     <span id="playerName"></span>
@@ -46,8 +47,6 @@
      <!--This is where the win/lose message appears, player can click 
      button to restart game-->
      <div id="end">
-          <div id="Final Score">
-          </div id="endGame">
           <p class="endMessage"></p>
           <button class="gameButton" id="return">Play Again</button>
      </div>

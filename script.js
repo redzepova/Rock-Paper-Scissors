@@ -36,6 +36,8 @@ endBin.style.display = 'none';
 gameBin = document.querySelector('#game');
 gameBin.style.display = 'none';
 playAgain = document.querySelector('#return');
+scoreKeeper = document.querySelector('.scoreKeeper')
+scoreKeeper.style.visibility = 'hidden';
 
 
 playAgain.addEventListener ('click', () => {
@@ -43,6 +45,7 @@ playAgain.addEventListener ('click', () => {
     player = 0;
     computer = 0;
     startBin.style.display = 'block';
+    scoreKeeper.style.visibility = 'hidden';
 })
 
 
@@ -59,6 +62,7 @@ start.addEventListener('click', () => {
     cScore.textContent = `${computer}`;
     startBin.style.display = 'none';
     gameBin.style.display = 'block';
+    scoreKeeper.style.visibility = 'visible';
 });
 
 //Computer choice function
