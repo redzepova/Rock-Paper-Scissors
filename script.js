@@ -49,10 +49,10 @@ playAgain.addEventListener ('click', () => {
     computer = 0;
     startBin.style.display = 'block';
     scoreKeeper.style.visibility = 'hidden';
+    endMessage.textContent = ''
+    returnMessage.style.visibility = 'hidden';
 })
 
-
-//fix this. pressing this button resets scores, but now they aren't automatically updating//
 start.addEventListener('click', () => {
     computerName = computerNameSelector();
     playerName = document.getElementById('nameInput').value;
@@ -171,13 +171,15 @@ function playGame (p, c) {
 
 function keepScore() {
     if (player === 5 || computer === 5) {
-        console.log('end the game now');
         endBin.style.display = 'block';
         gameBin.style.display = 'none';
-    } else if(player === 5) {
+        if(player === 5) {
         endMessage.textContent = `The new champion of Rock Paper Scissors: ${playerName}! Congratulations! `
-    } else {
+        } else {
         endMessage.textContent = `${computerName} remains champion. Live to fight another day, ${playerName}. `
+     };
+    } else {
+        endMessage.textContent = `Something weird happened. Try playing again.`
     };
 };
 
